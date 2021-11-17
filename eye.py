@@ -10,6 +10,7 @@ eye = eyeCascade.detectMultiScale(img_gray,scaleFactor=1.01,minNeighbors = 50)
 if len(eye)>0:
    for (x,y,w,h) in  eye:
       our_image_rect = cv.rectangle(img_color,(x,y),(x+w,y+h),(0,0,255),2)
+   cv.imwrite('detected image.png' , our_image_rect)
    cv.imshow("eye detect",our_image_rect)
 
 
